@@ -1,2 +1,76 @@
 @import "tailwindcss";
 @import "@heroui/styles";
+
+.image-card {
+	position: relative;
+   padding: 2px;
+	border-radius: 14px;
+	background: #1e293b;
+	overflow: hidden;
+}
+
+/* Animated Gradient Border */
+.image-card::before {
+	content: "";
+	position: absolute;
+	inset: -200%;
+	background: conic-gradient(
+		from 0deg,
+		#00f5ff,
+		#3b82f6,
+		#8b5cf6,
+		#308ad3,
+		#00f5ff
+	);
+	animation: rotateBorder 4s linear infinite;
+}
+
+/* Blur Glow Effect */
+.image-card::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: inherit;
+	border-radius: 24px;
+	box-shadow:
+		0 0 20px rgba(0, 245, 255, 0.4),
+		0 0 40px rgba(139, 92, 246, 0.3),
+		0 0 60px rgba(236, 72, 153, 0.2);
+	animation: glowPulse 2s ease-in-out infinite alternate;
+	z-index: 1;
+}
+
+/* Image Wrapper */
+.image-wrapper {
+	position: relative;
+	background: #0f172a;
+	border-radius: 12px;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.image-wrapper img {
+	width: 100%;
+	display: block;
+	border-radius: 12px;
+}
+
+/* Rotate Animation */
+@keyframes rotateBorder {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Glow Animation */
+@keyframes glowPulse {
+	from {
+		opacity: 0.5;
+		filter: blur(5px);
+	}
+
+	to {
+		opacity: 1;
+		filter: blur(18px);
+	}
+}

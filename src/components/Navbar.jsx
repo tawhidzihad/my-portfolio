@@ -10,14 +10,17 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<nav className="max-w-2xl fixed left-1/2 top-12 -translate-x-1/2 -translate-y-1/2">
-			<header className="backdrop-blur-xl bg-white/5 p-1 md:p-2 border border-zinc-200 rounded-full flex gap-3 items-center justify-around">
+		<nav className="max-w-2xl fixed left-1/2 top-12 -translate-x-1/2 -translate-y-1/2 z-50">
+			<header className="backdrop-blur-xl bg-black/5 p-1 md:p-2 border border-gray-400 rounded-full flex gap-3 items-center justify-around">
 				{/* navigation links */}
 				<div>
 					<ul className="flex gap-1">
 						<li>
 							<Link href={"#projects"}>
-								<Button variant="ghost" className={"text-zinc-500"}>
+								<Button
+									variant="ghost"
+									className={"text-zinc-500 hover:text-black"}
+								>
 									Projects
 								</Button>
 							</Link>
@@ -25,7 +28,10 @@ const Navbar = () => {
 
 						<li>
 							<Link href={"#skills"}>
-								<Button variant="ghost" className={"text-zinc-500"}>
+								<Button
+									variant="ghost"
+									className={"text-zinc-500 hover:text-black"}
+								>
 									Skills
 								</Button>
 							</Link>
@@ -33,7 +39,10 @@ const Navbar = () => {
 
 						<li>
 							<Link href={"#about"}>
-								<Button variant="ghost" className={"text-zinc-500"}>
+								<Button
+									variant="ghost"
+									className={"text-zinc-500 hover:text-black"}
+								>
 									About Me
 								</Button>
 							</Link>
@@ -46,13 +55,15 @@ const Navbar = () => {
 
 				{/* MD & LG icon */}
 				<div className="hidden md:flex gap-2 items-center">
-					<Button
-						className={
-							"bg-zinc-400 text-white hover:scale-103 transition-all hover:bg-zinc-500"
-						}
-					>
-						Contact
-					</Button>
+					<a href={"#contact-me"}>
+						<Button
+							className={
+								"bg-zinc-400 text-white hover:scale-103 transition-all hover:bg-zinc-500"
+							}
+						>
+							Contact
+						</Button>
+					</a>
 
 					<Button
 						className={"hover:scale-103 hover:bg-zinc-500 transition-all"}
@@ -80,13 +91,13 @@ const Navbar = () => {
 
 			{/* Dropdown - Mobile Menu */}
 			<div
-				className={`block md:hidden absolute right-6 mt-1 ${
+				className={`block md:hidden absolute right-6 mt-1 z-50 ${
 					isOpen
 						? "opacity-100 transition-all duration-300 translate-y-0 scale-100"
 						: "opacity-0 transition-all duration-300 -translate-y-3 scale-95 pointer-events-none"
 				}`}
 			>
-				<div className="flex p-2 gap-2 backdrop-blur-xl bg-white/5 border border-zinc-200 rounded-full">
+				<div className="flex p-2 gap-2 backdrop-blur-xl bg-black/5 border border-gray-400 rounded-full">
 					<div className="flex justify-center">
 						<Button
 							className={
