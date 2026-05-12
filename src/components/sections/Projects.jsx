@@ -8,33 +8,33 @@ const Projects = () => {
 				{/* Stats Card Container */}
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 					{/* Stats Card 1 */}
-					<div className="p-6 rounded-2xl bg-zinc-900/50 border hover:border-indigo-400 duration-75 transition-colors flex items-center gap-5">
+					<div className="px-5 py-3 rounded-2xl bg-zinc-900/50 border hover:border-indigo-400 duration-75 transition-colors flex items-center gap-5">
 						<span className="rounded-xl p-3 bg-blue-200">
 							<Layers3 className="h-7 w-auto text-blue-500" />
 						</span>
-						<div>
+						<div className="space-y-1">
 							<h2 className="text-3xl font-bold text-white">10+</h2>
 							<p className="text-zinc-500 text-sm">Projects</p>
 						</div>
 					</div>
 
 					{/* Stats Card 2 */}
-					<div className="p-6 rounded-2xl bg-zinc-900/50 border hover:border-indigo-400 duration-75 transition-colors flex items-center gap-5">
+					<div className="px-5 py-3 rounded-2xl bg-zinc-900/50 border hover:border-indigo-400 duration-75 transition-colors flex items-center gap-5">
 						<span className="rounded-xl p-3 bg-green-100">
 							<Code2 className="h-7 w-auto text-green-500" />
 						</span>
-						<div>
+						<div className="space-y-1">
 							<h2 className="text-3xl font-bold text-white">15+</h2>
 							<p className="text-zinc-500 text-sm">Technologies</p>
 						</div>
 					</div>
 
 					{/* Stast Card 3 */}
-					<div className="p-6 rounded-2xl bg-zinc-900/50 border hover:border-indigo-400 duration-75 transition-colors flex items-center gap-5">
+					<div className="px-5 py-3 rounded-2xl bg-zinc-900/50 border hover:border-indigo-400 duration-75 transition-colors flex items-center gap-5">
 						<span className="rounded-xl p-3 bg-purple-200">
 							<Calendar className="h-7 w-auto text-purple-500" />
 						</span>
-						<div>
+						<div className="space-y-1">
 							<h2 className="text-3xl font-bold text-white">3+</h2>
 							<p className="text-zinc-500 text-sm">Years Experience</p>
 						</div>
@@ -45,7 +45,7 @@ const Projects = () => {
 				<div className="max-w-xl mx-auto flex justify-center">
 					<div className="flex items-center">
 						<span className="w-24 h-1 bg-linear-to-r from-transparent to-blue-500"></span>
-						<span className="bg-blue-500 text-white font-bold text-sm md:text-xl px-5 py-2 rounded-full border border-zinc-400">
+						<span className="bg-blue-500 text-white font-bold text-sm md:text-xl px-2 md:px-6 py-2 rounded-full border border-zinc-400">
 							Projects Showcase
 						</span>
 						<span className="w-24 h-1 bg-linear-to-l from-transparent to-blue-500"></span>
