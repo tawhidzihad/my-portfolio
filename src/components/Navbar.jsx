@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@heroui/react";
 import Link from "next/link";
 import { useState } from "react";
 import { BiMoon } from "react-icons/bi";
@@ -17,34 +16,37 @@ const Navbar = () => {
 					<ul className="flex gap-1">
 						<li>
 							<Link href={"#projects"}>
-								<Button
-									variant="ghost"
-									className={"text-zinc-500 hover:text-black flex items-center"}
+								<button
+									className={
+										"text-zinc-500 hover:text-black flex items-center"
+									}
 								>
 									Projects
-								</Button>
+								</button>
 							</Link>
 						</li>
 
 						<li>
 							<Link href={"#skills"}>
-								<Button
-									variant="ghost"
-									className={"text-zinc-500 hover:text-black flex items-center"}
+								<button
+									className={
+										"text-zinc-500 hover:text-black flex items-center"
+									}
 								>
 									Skills
-								</Button>
+								</button>
 							</Link>
 						</li>
 
 						<li>
 							<Link href={"#about"}>
-								<Button
-									variant="ghost"
-									className={"text-zinc-500 hover:text-black flex items-center"}
+								<button
+									className={
+										"text-zinc-500 hover:text-black flex items-center"
+									}
 								>
 									About Me
-								</Button>
+								</button>
 							</Link>
 						</li>
 					</ul>
@@ -56,20 +58,22 @@ const Navbar = () => {
 				{/* MD & LG icon */}
 				<div className="hidden md:flex gap-2 items-center">
 					<a href={"#contact-me"}>
-						<Button
+						<button
 							className={
 								"bg-zinc-400 text-white hover:scale-103 transition-all hover:bg-zinc-500 flex items-center"
 							}
 						>
 							Contact
-						</Button>
+						</button>
 					</a>
 
-					<Button
-						className={"hover:scale-103 hover:bg-zinc-500 transition-all flex items-center"}
+					<button
+						className={
+							"hover:scale-103 hover:bg-zinc-500 transition-all flex items-center"
+						}
 					>
 						Download CV
-					</Button>
+					</button>
 
 					<span className="p-1 rounded-full border border-zinc-400 text-zinc-600 flex items-center">
 						<BiMoon className="w-6 h-6" />
@@ -99,23 +103,23 @@ const Navbar = () => {
 			>
 				<div className="flex p-2 gap-2 backdrop-blur-xl bg-black/5 border border-gray-400 rounded-full">
 					<div className="flex justify-center">
-						<Button
+						<button
 							className={
 								"bg-zinc-400 text-white hover:scale-103 transition-all hover:bg-zinc-500 flex items-center"
 							}
 						>
 							Contact
-						</Button>
+						</button>
 					</div>
 
 					<div className="flex justify-center">
-						<Button
+						<button
 							className={
 								"hover:scale-103 hover:bg-zinc-500 transition-all flex items-center"
 							}
 						>
 							Download CV
-						</Button>
+						</button>
 					</div>
 
 					<div className="flex justify-center">

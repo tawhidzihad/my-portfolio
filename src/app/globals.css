@@ -1,9 +1,4 @@
 @import "tailwindcss";
-@import "@heroui/styles";
-
-html {
-	-webkit-text-size-adjust: 100%;
-}
 
 .image-card {
 	position: relative;

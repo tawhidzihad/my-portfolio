@@ -1,4 +1,3 @@
-import { Chip } from "@heroui/react";
 import Image from "next/image";
 import { FaCode } from "react-icons/fa";
 import { GoBrowser } from "react-icons/go";
@@ -34,24 +33,9 @@ const ProjectCard = () => {
 
 				{/* Tags */}
 				<div className="flex flex-wrap gap-3">
-					<Chip className="bg-transparent text-white border border-white/10 flex items-center">
+					{/* <Chip className="bg-transparent text-white border border-white/10 flex items-center">
 						JavaScript
-					</Chip>
-					<Chip className="bg-transparent text-white border border-white/10 flex items-center">
-						NextJS
-					</Chip>
-					<Chip className="bg-transparent text-white border border-white/10 flex items-center">
-						TailwindCSS
-					</Chip>
-					<Chip className="bg-transparent text-white border border-white/10 flex items-center">
-						HeroUI
-					</Chip>
-					<Chip className="bg-transparent text-white border border-white/10 flex items-center">
-						MongoDB
-					</Chip>
-					<Chip className="bg-transparent text-white border border-white/10 flex items-center">
-						BetterAuth
-					</Chip>
+					</Chip> */}
 				</div>
 
 				{/* Buttons */}
