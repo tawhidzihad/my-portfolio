@@ -81,13 +81,13 @@ const Navbar = () => {
 
 			{/* Dropdown - Mobile Menu */}
 			<div
-				className={`lg:hidden absolute right-6 mt-1 z-50 ${
+				className={`lg:hidden absolute right-4 mt-1 z-50 ${
 					isOpen
 						? "opacity-100 transition-all duration-300 translate-y-0 scale-100"
 						: "opacity-0 transition-all duration-300 -translate-y-3 scale-95 pointer-events-none"
 				}`}
 			>
-				<div className="flex p-2 gap-2 backdrop-blur-xl bg-black/5 border border-gray-400 rounded-full">
+				<div className="flex p-1 md:p-2 gap-2 backdrop-blur-xs bg-black/5 border border-gray-400 rounded-full">
 					<div className="flex justify-center">
 						<a href={"#contact-me"}>
 							<button

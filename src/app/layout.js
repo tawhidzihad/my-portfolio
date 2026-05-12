@@ -17,7 +17,6 @@ import "./globals.css";
 const plusJakarta = Plus_Jakarta_Sans({
 	variableL: "--plus-jakarta-font",
 	subsets: ["latin"],
-	// weight: ["200", "300", "400", "500", "700", "800", "900"],
 });
 
 export const metadata = {
