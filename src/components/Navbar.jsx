@@ -11,7 +11,7 @@ const Navbar = () => {
 
 	return (
 		<nav className="max-w-2xl fixed left-1/2 top-12 -translate-x-1/2 -translate-y-1/2 z-50">
-			<header className="backdrop-blur-xl bg-black/5 p-1 md:p-2 border border-gray-400 rounded-full flex gap-3 items-center justify-around">
+			<header className="backdrop-blur-xs bg-black/5 p-1 md:p-2 border border-gray-400 rounded-full flex gap-3 items-center justify-around">
 				{/* navigation links */}
 				<div>
 					<ul className="flex gap-1">
@@ -19,7 +19,7 @@ const Navbar = () => {
 							<Link href={"#projects"}>
 								<Button
 									variant="ghost"
-									className={"text-zinc-500 hover:text-black"}
+									className={"text-zinc-500 hover:text-black flex items-center"}
 								>
 									Projects
 								</Button>
@@ -30,7 +30,7 @@ const Navbar = () => {
 							<Link href={"#skills"}>
 								<Button
 									variant="ghost"
-									className={"text-zinc-500 hover:text-black"}
+									className={"text-zinc-500 hover:text-black flex items-center"}
 								>
 									Skills
 								</Button>
@@ -41,7 +41,7 @@ const Navbar = () => {
 							<Link href={"#about"}>
 								<Button
 									variant="ghost"
-									className={"text-zinc-500 hover:text-black"}
+									className={"text-zinc-500 hover:text-black flex items-center"}
 								>
 									About Me
 								</Button>
@@ -58,7 +58,7 @@ const Navbar = () => {
 					<a href={"#contact-me"}>
 						<Button
 							className={
-								"bg-zinc-400 text-white hover:scale-103 transition-all hover:bg-zinc-500"
+								"bg-zinc-400 text-white hover:scale-103 transition-all hover:bg-zinc-500 flex items-center"
 							}
 						>
 							Contact
@@ -66,12 +66,12 @@ const Navbar = () => {
 					</a>
 
 					<Button
-						className={"hover:scale-103 hover:bg-zinc-500 transition-all"}
+						className={"hover:scale-103 hover:bg-zinc-500 transition-all flex items-center"}
 					>
 						Download CV
 					</Button>
 
-					<span className="p-1 rounded-full border border-zinc-400 text-zinc-600">
+					<span className="p-1 rounded-full border border-zinc-400 text-zinc-600 flex items-center">
 						<BiMoon className="w-6 h-6" />
 					</span>
 				</div>
@@ -101,7 +101,7 @@ const Navbar = () => {
 					<div className="flex justify-center">
 						<Button
 							className={
-								"bg-zinc-400 text-white hover:scale-103 transition-all hover:bg-zinc-500"
+								"bg-zinc-400 text-white hover:scale-103 transition-all hover:bg-zinc-500 flex items-center"
 							}
 						>
 							Contact
@@ -111,7 +111,7 @@ const Navbar = () => {
 					<div className="flex justify-center">
 						<Button
 							className={
-								"hover:scale-103 hover:bg-zinc-500 transition-all"
+								"hover:scale-103 hover:bg-zinc-500 transition-all flex items-center"
 							}
 						>
 							Download CV

@@ -1,4 +1,5 @@
 import { Calendar, Code2, Layers3 } from "lucide-react";
+import { FaPlus } from "react-icons/fa";
 import ProjectCard from "../ProjectCard";
 
 const Projects = () => {
@@ -12,8 +13,10 @@ const Projects = () => {
 						<span className="rounded-xl p-3 bg-blue-200">
 							<Layers3 className="h-7 w-auto text-blue-500" />
 						</span>
-						<div className="space-y-1">
-							<h2 className="text-3xl font-bold text-white">10+</h2>
+						<div>
+							<h2 className="text-3xl font-bold text-white flex items-center gap-1">
+								10 <FaPlus className="text-xs" />
+							</h2>
 							<p className="text-zinc-500 text-sm">Projects</p>
 						</div>
 					</div>
@@ -24,7 +27,9 @@ const Projects = () => {
 							<Code2 className="h-7 w-auto text-green-500" />
 						</span>
 						<div className="space-y-1">
-							<h2 className="text-3xl font-bold text-white">15+</h2>
+							<h2 className="text-3xl font-bold text-white flex items-center gap-1">
+								15 <FaPlus className="text-xs" />
+							</h2>
 							<p className="text-zinc-500 text-sm">Technologies</p>
 						</div>
 					</div>
@@ -35,7 +40,9 @@ const Projects = () => {
 							<Calendar className="h-7 w-auto text-purple-500" />
 						</span>
 						<div className="space-y-1">
-							<h2 className="text-3xl font-bold text-white">3+</h2>
+							<h2 className="text-3xl font-bold text-white flex items-center gap-1">
+								3 <FaPlus className="text-xs" />
+							</h2>
 							<p className="text-zinc-500 text-sm">Years Experience</p>
 						</div>
 					</div>
