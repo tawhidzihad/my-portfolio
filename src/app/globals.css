@@ -1,9 +1,13 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
 .image-card {
 	position: relative;
-   padding: 2px;
+	padding: 2px;
 	border-radius: 14px;
 	background: #1e293b;
 	overflow: hidden;

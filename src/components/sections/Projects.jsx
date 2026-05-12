@@ -52,7 +52,7 @@ const Projects = () => {
 				<div className="max-w-xl mx-auto flex justify-center">
 					<div className="flex items-center">
 						<span className="w-24 h-1 bg-linear-to-r from-transparent to-blue-500"></span>
-						<span className="bg-blue-500 text-white font-bold text-sm md:text-xl px-2 md:px-6 py-2 rounded-full border border-zinc-400">
+						<span className="bg-blue-500 text-white font-bold text-[12px] md:text-xl px-2 md:px-6 py-2 rounded-full border border-zinc-400">
 							Projects Showcase
 						</span>
 						<span className="w-24 h-1 bg-linear-to-l from-transparent to-blue-500"></span>
