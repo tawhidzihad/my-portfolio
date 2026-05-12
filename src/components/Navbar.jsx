@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { BiMoon } from "react-icons/bi";
 import { RiMenuFill, RiMenuFold2Fill } from "react-icons/ri";
@@ -9,58 +8,45 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<nav className="max-w-2xl fixed left-1/2 top-12 -translate-x-1/2 -translate-y-1/2 z-50">
-			<header className="backdrop-blur-xs bg-black/5 p-1 md:p-2 border border-gray-400 rounded-full flex gap-3 items-center justify-around">
+		<nav className="fixed left-1/2 top-12 -translate-x-1/2 -translate-y-1/2 z-50">
+			<header className="backdrop-blur-xs bg-black/5 p-1 md:p-2 border border-gray-400 rounded-full flex items-center justify-around gap-3">
 				{/* navigation links */}
-				<div>
-					<ul className="flex gap-1">
-						<li>
-							<Link href={"#projects"}>
-								<button
-									className={
-										"text-zinc-500 hover:text-black flex items-center"
-									}
-								>
-									Projects
-								</button>
-							</Link>
-						</li>
-
-						<li>
-							<Link href={"#skills"}>
-								<button
-									className={
-										"text-zinc-500 hover:text-black flex items-center"
-									}
-								>
-									Skills
-								</button>
-							</Link>
-						</li>
-
-						<li>
-							<Link href={"#about"}>
-								<button
-									className={
-										"text-zinc-500 hover:text-black flex items-center"
-									}
-								>
-									About Me
-								</button>
-							</Link>
-						</li>
-					</ul>
+				<div className="flex items-center justify-center gap-1">
+					<div>
+						<a
+							href="#projects"
+							className="btn border-none shadow-none font-normal btn-ghost rounded-full text-zinc-400 hover:text-white"
+						>
+							Projects
+						</a>
+					</div>
+					<div>
+						<a
+							href="#skills"
+							className="btn border-none shadow-none font-normal btn-ghost rounded-full text-zinc-400 hover:text-white"
+						>
+							Skills
+						</a>
+					</div>
+					<div>
+						<a
+							href="#about"
+							className="btn border-none shadow-none font-normal btn-ghost rounded-full text-zinc-400 hover:text-white"
+						>
+							About
+						</a>
+					</div>
 				</div>
 
 				{/* Divider */}
 				<div className="border-r border-zinc-400 h-5"></div>
 
-				{/* MD & LG icon */}
-				<div className="hidden md:flex gap-2 items-center">
+				{/* Learge Screen Button */}
+				<div className="hidden lg:flex gap-2 items-center">
 					<a href={"#contact-me"}>
 						<button
 							className={
-								"bg-zinc-400 text-white hover:scale-103 transition-all hover:bg-zinc-500 flex items-center"
+								"btn border-none shadow-none font-normal rounded-full text-white bg-blue-500 hover:scale-103 transition-all hover:bg-zinc-500"
 							}
 						>
 							Contact
@@ -69,20 +55,20 @@ const Navbar = () => {
 
 					<button
 						className={
-							"hover:scale-103 hover:bg-zinc-500 transition-all flex items-center"
+							"btn border-none shadow-none font-normal rounded-full text-white bg-blue-500 hover:scale-103 hover:bg-zinc-500 transition-all"
 						}
 					>
 						Download CV
 					</button>
 
-					<span className="p-1 rounded-full border border-zinc-400 text-zinc-600 flex items-center">
+					<span className="p-1 rounded-full border border-zinc-500 text-zinc-300 flex items-center">
 						<BiMoon className="w-6 h-6" />
 					</span>
 				</div>
 
 				{/* Conditional render - menu icon */}
 				<div
-					className={`md:hidden p-3 relative`}
+					className={`lg:hidden p-3 relative`}
 					onClick={() => setIsOpen(!isOpen)}
 				>
 					{isOpen ? (
@@ -95,7 +81,7 @@ const Navbar = () => {
 
 			{/* Dropdown - Mobile Menu */}
 			<div
-				className={`block md:hidden absolute right-6 mt-1 z-50 ${
+				className={`lg:hidden absolute right-6 mt-1 z-50 ${
 					isOpen
 						? "opacity-100 transition-all duration-300 translate-y-0 scale-100"
 						: "opacity-0 transition-all duration-300 -translate-y-3 scale-95 pointer-events-none"
@@ -103,19 +89,21 @@ const Navbar = () => {
 			>
 				<div className="flex p-2 gap-2 backdrop-blur-xl bg-black/5 border border-gray-400 rounded-full">
 					<div className="flex justify-center">
-						<button
-							className={
-								"bg-zinc-400 text-white hover:scale-103 transition-all hover:bg-zinc-500 flex items-center"
-							}
-						>
-							Contact
-						</button>
+						<a href={"#contact-me"}>
+							<button
+								className={
+									"btn border-none shadow-none font-normal rounded-full text-white bg-blue-500 hover:scale-103 transition-all hover:bg-zinc-500"
+								}
+							>
+								Contact
+							</button>
+						</a>
 					</div>
 
 					<div className="flex justify-center">
 						<button
 							className={
-								"hover:scale-103 hover:bg-zinc-500 transition-all flex items-center"
+								"btn border-none shadow-none font-normal rounded-full text-white bg-blue-500 hover:scale-103 hover:bg-zinc-500 transition-all"
 							}
 						>
 							Download CV
@@ -123,7 +111,7 @@ const Navbar = () => {
 					</div>
 
 					<div className="flex justify-center">
-						<span className="flex items-center border p-2 rounded-full border-zinc-400 text-zinc-600">
+						<span className="flex items-center border p-2 rounded-full border-zinc-500 text-zinc-300">
 							<BiMoon className="w-6 h-6" />
 						</span>
 					</div>

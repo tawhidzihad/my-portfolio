@@ -1,11 +1,23 @@
 import Navbar from "@/components/Navbar";
-import { Tajawal } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const tajawal = Tajawal({
-	variable: "--font-tajawal",
+// const tajawal = Tajawal({
+// 	variable: "--font-tajawal",
+// 	subsets: ["latin"],
+// 	weight: ["200", "300", "400", "500", "700", "800", "900"],
+// });
+
+// const outfit = Outfit({
+// 	variableL: "--outfit-font",
+// 	subsets: ["latin"],
+// 	weight: ["200", "300", "400", "500", "700", "800", "900"],
+// });
+
+const plusJakarta = Plus_Jakarta_Sans({
+	variableL: "--plus-jakarta-font",
 	subsets: ["latin"],
-	weight: ["200", "300", "400", "500", "700", "800", "900"],
+	// weight: ["200", "300", "400", "500", "700", "800", "900"],
 });
 
 export const metadata = {
@@ -22,12 +34,11 @@ export const metadata = {
 	],
 };
 
-
 export default function RootLayout({ children }) {
 	return (
 		<html
 			lang="en"
-			className={`${tajawal.className} h-full antialiased scroll-smooth`}
+			className={`${plusJakarta.className} h-full antialiased scroll-smooth`}
 		>
 			<body className="min-h-full flex flex-col">
 				<header>
