@@ -11,7 +11,7 @@ const TypeWriting = () => {
 					1000,
 					"Designer.",
 					1000,
-					"Innovertor",
+					"Innovertor.",
 					1000,
 					"Engineer.",
 					1000,
