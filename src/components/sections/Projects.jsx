@@ -4,8 +4,8 @@ import ProjectCard from "../ProjectCard";
 
 const Projects = () => {
 	return (
-		<div id="projects" className="bg-gray-800 pt-5 md:pt-22 pb-20">
-			<div className="max-w-7xl mx-auto px-5 lg:px-0 space-y-15">
+		<div id="projects" className="bg-[#011026] pt-5 md:pt-22 pb-20">
+			<div className="max-w-7xl mx-auto px-5 lg:px-0 space-y-12">
 				{/* Stats Card Container */}
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 					{/* Stats Card 1 */}
@@ -53,7 +53,7 @@ const Projects = () => {
 					<div className="flex items-center">
 						<span className="w-24 h-1 bg-linear-to-r from-transparent to-blue-500"></span>
 
-						<span className="bg-blue-500 text-white font-normal md:font-medium text-xs md:text-xl p-2 md:p-3 rounded-full border border-zinc-400">
+						<span className="bg-blue-500 text-white font-normal text-xs md:font-medium md:text-xl p-2 md:p-4 rounded-full">
 							Projects Showcase
 						</span>
 
@@ -74,7 +74,7 @@ const Projects = () => {
 						</span>
 					</h2>
 
-					<p className="mt-2 max-w-2xl mx-auto text-slate-400 text-lg leading-relaxed font-medium">
+					<p className="mt-2 max-w-2xl mx-auto text-slate-400 md:text-lg leading-relaxed font-medium">
 						A selection of high-impact digital solutions, built with focus
 						on scalability, performance, and exceptional user experience.
 					</p>

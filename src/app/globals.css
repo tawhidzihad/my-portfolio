@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@plugin "daisyui";
-
+@import "@heroui/styles";
+ 
 .image-card {
 	position: relative;
 	padding: 2px;

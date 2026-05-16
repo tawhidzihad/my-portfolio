@@ -1,3 +1,4 @@
+import { Button, Chip } from "@heroui/react";
 import Image from "next/image";
 import { FaCode } from "react-icons/fa";
 import { GoBrowser } from "react-icons/go";
@@ -18,12 +19,12 @@ const ProjectCard = () => {
 
 			{/* Content */}
 			<div className="space-y-6 p-6 text-white">
-				<div>
-					<h2 className="text-2xl font-bold text-white hover:text-blue-500 transition-colors">
+				<div className="space-y-4">
+					<h2 className="text-2xl font-bold text-white hover:text-blue-500 transition-all duration-300 ease-in-out">
 						BookLend
 					</h2>
 
-					<p className="text-slate-400 line-clamp-2 text-lg leading-relaxed font-medium italic">
+					<p className="text-slate-400 line-clamp-3 text-lg leading-5 font-normal">
 						Booklend is a digital book borrowing platform where users can
 						browse, borrow, and manage books online. It features
 						authentication, pricing plans, and activity tracking for a
@@ -33,23 +34,26 @@ const ProjectCard = () => {
 
 				{/* Tags */}
 				<div className="flex flex-wrap gap-3">
-					{/* <Chip className="bg-transparent text-white border border-white/10 flex items-center">
+					<Chip className="bg-transparent text-white border border-white/10 flex items-center">
 						JavaScript
-					</Chip> */}
+					</Chip>
 				</div>
 
 				{/* Buttons */}
 				<div className="flex gap-2">
-					<a href="">
-						<button className="flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 md:px-6 md:py-2 hover:text-blue-500 hover:border-blue-500 transition-all duration-300 ease-in-out">
-							Source Code <FaCode />
-						</button>
-					</a>
-					<a href="">
-						<button className="flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 md:px-6 md:py-2 hover:text-blue-500 hover:border-blue-500 transition-all duration-300 ease-in-out">
-							Live Demo <GoBrowser />
-						</button>
-					</a>
+					<Button
+						variant="ghost"
+						className="flex items-center gap-2 rounded-full border border-blue-500/70 text-white hover:bg-blue-500 transition-all duration-300 ease-in-out"
+					>
+						Source Code <FaCode />
+					</Button>
+
+					<Button
+						variant="ghost"
+						className="flex items-center gap-2 rounded-full border border-blue-500/70 text-white hover:bg-blue-500 transition-all duration-300 ease-in-out"
+					>
+						Live Demo <GoBrowser />
+					</Button>
 				</div>
 			</div>
 		</div>
