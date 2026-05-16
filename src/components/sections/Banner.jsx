@@ -27,7 +27,7 @@ const Banner = () => {
 							</span>
 						</h1>
 
-						<p className="text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
+						<p className="text-[16px] md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
 							I&apos;m{" "}
 							<span className="text-white font-bold"> Tawhid</span>, a
 							professional <TypeWriting /> <br />

@@ -1,15 +1,75 @@
+import { Button } from "@heroui/react";
 import { Calendar, Code2, Layers3 } from "lucide-react";
 import { FaPlus } from "react-icons/fa";
 import ProjectCard from "../ProjectCard";
 
 const Projects = () => {
+	const projects = [
+		{
+			id: 1,
+			title: "BookLend",
+			image: "https://i.ibb.co.com/S2hW5Gx/lqk-WNOj-KPfu-B.png",
+			description:
+				"Booklend is a digital book borrowing platform where users can browse, borrow, and manage books online. It features authentication, pricing plans, and activity tracking for a seamless user experience with responsive design.",
+			technologies: [
+				"JavaScript",
+				"NextJS",
+				"TailwindCSS",
+				"DaisyUI",
+				"MongoDB",
+				"BetterAuth",
+			],
+
+			repoLink: "https://github.com/tawhidzihad/assignment-008-nextjs-app",
+			liveLink: "https://book-lend-ten.vercel.app",
+		},
+
+		{
+			id: 2,
+			title: "KeenKeeper",
+			image: "https://i.ibb.co.com/Jh6yR6V/Aa-lg-W4i-Sm67hl-NY4-Im-N-Q.png",
+			description:
+				"KeenKeeper is a modern social tracking app designed to help users maintain meaningful connections with their friends. It allows users to log interactions such as text messages, audio calls, and video calls, and visualize their communication history through a clean timeline interface. By keeping track of how often and how recently you connect with people, KeenKeeper helps ensure that no important relationship fades away over time.",
+			technologies: [
+				"JavaScript",
+				"React",
+				"TailwindCSS",
+				"DaisyUI",
+				"React Router",
+				"Recharts",
+			],
+
+			repoLink: "https://github.com/tawhidzihad/assignment-007-react-app",
+			liveLink: "https://kinkeeper-psi.vercel.app/",
+		},
+
+		{
+			id: 3,
+			title: "DigiTools",
+			image: "https://i.ibb.co.com/p6CZfxXV/fw3y-O8n8-T7a-Qv3568nm-Qq-A.png",
+			description:
+				"DigiTools is a modern online platform created to offer access to high-quality premium digital tools at reasonable prices. The platform is developed to focus on delivering a high-class user experience with a clean interface",
+			technologies: [
+				"JSON File",
+				"JavaScript",
+				"React",
+				"TailwindCSS",
+				"DaisyUI",
+				"React-Toastify",
+			],
+
+			repoLink: "https://github.com/tawhidzihad/assignment-006-react",
+			liveLink: "https://digitoolspremium.netlify.app/",
+		},
+	];
+
 	return (
 		<div id="projects" className="bg-[#011026] pt-5 md:pt-22 pb-20">
 			<div className="max-w-7xl mx-auto px-5 lg:px-0 space-y-12">
 				{/* Stats Card Container */}
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 					{/* Stats Card 1 */}
-					<div className="px-5 py-3 rounded-2xl bg-zinc-900/50 border hover:border-indigo-400 duration-75 transition-colors flex items-center gap-5">
+					<div className="px-5 py-3 rounded-2xl bg-blue-900/10 flex items-center gap-5">
 						<span className="rounded-xl p-3 bg-blue-200">
 							<Layers3 className="h-7 w-auto text-blue-500" />
 						</span>
@@ -22,7 +82,7 @@ const Projects = () => {
 					</div>
 
 					{/* Stats Card 2 */}
-					<div className="px-5 py-3 rounded-2xl bg-zinc-900/50 border hover:border-indigo-400 duration-75 transition-colors flex items-center gap-5">
+					<div className="px-5 py-3 rounded-2xl bg-blue-900/10 flex items-center gap-5">
 						<span className="rounded-xl p-3 bg-green-100">
 							<Code2 className="h-7 w-auto text-green-500" />
 						</span>
@@ -35,7 +95,7 @@ const Projects = () => {
 					</div>
 
 					{/* Stast Card 3 */}
-					<div className="px-5 py-3 rounded-2xl bg-zinc-900/50 border hover:border-indigo-400 duration-75 transition-colors flex items-center gap-5">
+					<div className="px-5 py-3 rounded-2xl bg-blue-900/10 flex items-center gap-5">
 						<span className="rounded-xl p-3 bg-purple-200">
 							<Calendar className="h-7 w-auto text-purple-500" />
 						</span>
@@ -81,10 +141,21 @@ const Projects = () => {
 				</div>
 
 				{/* Projects Card Container */}
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-					<ProjectCard />
-					<ProjectCard />
-					<ProjectCard />
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{projects.map((project) => (
+						<ProjectCard key={project.id} project={project}></ProjectCard>
+					))}
+				</div>
+
+				<div className="flex justify-center items-center">
+					<Button
+						size="lg"
+						className={
+							"text-white bg-blue-500 hover:scale-95 transition-all duration-300 hover:bg-zinc-500 rounded-xl"
+						}
+					>
+						Explore Full Archive
+					</Button>
 				</div>
 			</div>
 		</div>

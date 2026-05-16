@@ -20,7 +20,7 @@ const TypeWriting = () => {
 				speed={40}
 				deletionSpeed={30}
 				cursor={false}
-				style={{ fontSize: "18px", display: "inline-block" }}
+				style={{ fontSize: "16px", display: "inline-block" }}
 				repeat={Infinity}
 				className="text-blue-500 leading-relaxed font-bold"
 			/>
