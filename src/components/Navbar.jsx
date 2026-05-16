@@ -96,7 +96,7 @@ const Navbar = () => {
 
 			{/* Dropdown - Mobile Menu */}
 			<div
-				className={`lg:hidden absolute right-8.5 mt-2 z-50 ${
+				className={`lg:hidden absolute right-7 mt-1 z-50 ${
 					isOpen
 						? "opacity-100 transition-all duration-300 translate-y-0 scale-100"
 						: "opacity-0 transition-all duration-300 -translate-y-3 scale-95 pointer-events-none"

@@ -1,5 +1,6 @@
 import { Button } from "@heroui/react";
 import Link from "next/link";
+import { BsPhoneVibrate } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
 import BannerRightSideCard from "../BannerRightSideCard";
 import TypeWriting from "../TypeWriting";
@@ -59,8 +60,8 @@ const Banner = () => {
 										"flex text-white bg-blue-500 hover:scale-103 transition-all hover:bg-zinc-500"
 									}
 								>
-									View Projects
-									<IoIosArrowForward className="hover:scale-103 transition-all" />
+									Contact
+									<BsPhoneVibrate className="hover:scale-103 transition-all" />
 								</Button>
 							</Link>
 						</div>
