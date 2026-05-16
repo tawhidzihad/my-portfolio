@@ -12,14 +12,10 @@ const Banner = () => {
 				{/* Left side */}
 				<div className="lg:w-2/4 space-y-6">
 					<div className="px-5 md:px-0 space-y-5">
-						{/* <span className="text-blue-500 shadow-2xl shadow-blue-300 font-medium bg-blue-500/10 py-2 px-3 border border-blue-500/10 rounded-full">
-							Built with passion & precision
-						</span> */}
-
-						<span className="text-blue-500 font-normal bg-blue-500/10 py-2 px-3 border border-blue-500/10 rounded-full [text-shadow:0_0_15px_rgba(59,130,246,0.8)] tracking-widest">
+						<span className="text-blue-500 font-normal text-xs bg-blue-500/10 py-2 px-3 border border-blue-500/10 rounded-full [text-shadow:0_0_15px_rgba(59,130,246,0.8)] tracking-widest">
 							WELCOME TO MY PORTFOLIO
 						</span>
-						<h1 className="text-5xl md:text-6xl lg:text-8xl font-black text-white leading-none mt-5">
+						<h1 className="text-[40px] md:text-6xl lg:text-8xl font-black text-white leading-none mt-5">
 							<span className="lg:mr-5">Crafting</span>
 							<br className="lg:hidden" />
 							<span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-800">
