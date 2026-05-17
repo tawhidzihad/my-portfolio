@@ -58,7 +58,10 @@ const Navbar = () => {
 
 				{/* Learge Screen Button */}
 				<div className="hidden lg:flex gap-2 items-center">
-					<a href={"#contact-me"}>
+					<a
+						href="https://www.linkedin.com/in/tawhidulislamzihad"
+						target="_blank"
+					>
 						<Button
 							className={
 								"font-mono text-white bg-blue-500 hover:scale-95 transition-all duration-300 hover:bg-zinc-500"
@@ -104,7 +107,10 @@ const Navbar = () => {
 			>
 				<div className="flex items-center p-1 lg:p-2 gap-2 backdrop-blur-xs bg-black/5 border border-gray-400 rounded-full">
 					<div className="flex justify-center">
-						<a href={"#contact-me"}>
+						<a
+							href="https://www.linkedin.com/in/tawhidulislamzihad"
+							target="_blank"
+						>
 							<Button
 								className={
 									"font-mono text-white bg-blue-500 hover:scale-95 transition-all duration-300 hover:bg-zinc-500"

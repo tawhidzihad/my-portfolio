@@ -113,7 +113,7 @@ const Projects = () => {
 					<div className="flex items-center">
 						<span className="w-24 h-1 bg-linear-to-r from-transparent to-blue-500"></span>
 
-						<span className="bg-blue-500 text-white font-normal text-xs md:font-medium md:text-xl p-2 md:p-4 rounded-full">
+						<span className="bg-blue-500 text-white font-normal text-xs md:text-xl p-2 md:px-4 rounded-full">
 							Projects Showcase
 						</span>
 

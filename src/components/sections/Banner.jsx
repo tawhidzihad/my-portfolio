@@ -50,7 +50,7 @@ const Banner = () => {
 							</Link>
 						</div>
 						<div>
-							<Link href={"#contact-me"}>
+							<a href={"https://www.linkedin.com/in/tawhidulislamzihad"} target="_blank">
 								<Button
 									className={
 										"flex text-white bg-blue-500 hover:scale-103 transition-all hover:bg-zinc-500"
@@ -59,7 +59,7 @@ const Banner = () => {
 									Contact
 									<BsPhoneVibrate className="hover:scale-103 transition-all" />
 								</Button>
-							</Link>
+							</a>
 						</div>
 					</div>
 				</div>

@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => {
 					alt="project"
 					width={200}
 					height={200}
-					className="h-70 w-auto object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+					className="h-60 w-auto object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
 				/>
 			</div>
 

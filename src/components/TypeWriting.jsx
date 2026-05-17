@@ -17,12 +17,11 @@ const TypeWriting = () => {
 					1000,
 				]}
 				wrapper="span"
-				speed={40}
-				deletionSpeed={30}
+				speed={30}
 				cursor={false}
-				style={{ fontSize: "16px", display: "inline-block" }}
+				style={{ display: "inline-block" }}
 				repeat={Infinity}
-				className="text-blue-500 leading-relaxed font-bold"
+				className="text-blue-500 leading-relaxed font-bold text-[16px] md:text-xl"
 			/>
 		</>
 	);

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaSquarePhone } from "react-icons/fa6";
+import { HiLocationMarker } from "react-icons/hi";
 import { SiGmail } from "react-icons/si";
 
 const Footer = () => {
@@ -60,12 +61,15 @@ const Footer = () => {
 							</li>
 
 							<li>
-								<Link
-									href={"#contact-me"}
+								<a
+									href={
+										"https://www.linkedin.com/in/tawhidulislamzihad"
+									}
+									target="_blank"
 									className="text-gray-400 hover:text-blue-500 hover:border-b hover:border-blue-500 transition-all ease-in-out duration-300 font-medium"
 								>
 									Contact
-								</Link>
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -93,6 +97,15 @@ const Footer = () => {
 									<FaSquarePhone />
 									+8801704725639
 								</Link>
+
+								<a
+									href={"https://maps.app.goo.gl/GR3erfcVvD6Pt84Y7"}
+									target="_blank"
+									className="flex items-center gap-3"
+								>
+									<HiLocationMarker />
+									Dhaka, Bangladesh
+								</a>
 							</div>
 						</div>
 					</div>
