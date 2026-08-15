@@ -3,18 +3,6 @@ import Navbar from "@/components/Navbar";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-// const tajawal = Tajawal({
-// 	variable: "--font-tajawal",
-// 	subsets: ["latin"],
-// 	weight: ["200", "300", "400", "500", "700", "800", "900"],
-// });
-
-// const outfit = Outfit({
-// 	variableL: "--outfit-font",
-// 	subsets: ["latin"],
-// 	weight: ["200", "300", "400", "500", "700", "800", "900"],
-// });
-
 const plusJakarta = Plus_Jakarta_Sans({
 	variableL: "--plus-jakarta-font",
 	subsets: ["latin"],

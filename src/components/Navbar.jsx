@@ -71,13 +71,15 @@ const Navbar = () => {
 						</Button>
 					</a>
 
-					<Button
-						className={
-							"font-mono text-white bg-blue-500 hover:scale-95 transition-all duration-300 hover:bg-zinc-500"
-						}
-					>
-						Download CV
-					</Button>
+               <a href="https://drive.google.com/file/d/1kmbuew2oYSq2H2zX8i8TItocUjf8OCuY/view" target="_blank">
+                  <Button
+                     className={
+                        "font-mono text-white bg-blue-500 hover:scale-95 transition-all duration-300 hover:bg-zinc-500"
+                     }
+                  >
+                     Resume
+                  </Button>
+               </a>
 
 					<span className="p-1 rounded-full border border-zinc-500 text-zinc-300 flex items-center hover:scale-95 transition-all duration-300">
 						<BiMoon className="w-6 h-6" />
@@ -122,13 +124,15 @@ const Navbar = () => {
 					</div>
 
 					<div className="flex justify-center">
-						<Button
-							className={
-								"font-mono text-white bg-blue-500 hover:scale-95 transition-all duration-300 hover:bg-zinc-500"
-							}
-						>
-							Download CV
-						</Button>
+						<a href="https://drive.google.com/file/d/1kmbuew2oYSq2H2zX8i8TItocUjf8OCuY/view" target="_blank">
+                     <Button
+                        className={
+                           "font-mono text-white bg-blue-500 hover:scale-95 transition-all duration-300 hover:bg-zinc-500"
+                        }
+                     >
+                        Resume
+                     </Button>
+                  </a>
 					</div>
 
 					<div className="flex justify-center">
