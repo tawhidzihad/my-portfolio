@@ -6,24 +6,36 @@ import {
 	useMotionValue,
 	useSpring,
 } from "framer-motion";
+import { useState } from "react";
+import { FiCheck, FiCopy } from "react-icons/fi";
+
+const codeContent = `const developer = {
+  name: "Tawhidul Islam",
+  role: "Full Stack Engineer",
+  stack: ["Next.js", "React", "Node.js", "MongoDB"],
+  openForWork: true,
+  build: () => "High Performance & Clean Architecture"
+};
+
+developer.showcase();`;
 
 export default function BannerRightSideCard() {
+	const [copied, setCopied] = useState(false);
 	const mouseX = useMotionValue(0);
 	const mouseY = useMotionValue(0);
 
 	const rotateX = useSpring(0, {
-		stiffness: 180,
-		damping: 22,
+		stiffness: 160,
+		damping: 24,
 	});
 
 	const rotateY = useSpring(0, {
-		stiffness: 180,
-		damping: 22,
+		stiffness: 160,
+		damping: 24,
 	});
 
 	const handleMouseMove = (e) => {
 		const rect = e.currentTarget.getBoundingClientRect();
-
 		const width = rect.width;
 		const height = rect.height;
 
@@ -36,8 +48,8 @@ export default function BannerRightSideCard() {
 		mouseX.set(x);
 		mouseY.set(y);
 
-		rotateX.set(-(centerY / height) * 8);
-		rotateY.set((centerX / width) * 8);
+		rotateX.set(-(centerY / height) * 7);
+		rotateY.set((centerX / width) * 7);
 	};
 
 	const handleMouseLeave = () => {
@@ -47,19 +59,24 @@ export default function BannerRightSideCard() {
 
 	const glowBackground = useMotionTemplate`
     radial-gradient(
-      300px circle at ${mouseX}px ${mouseY}px,
-      rgba(43, 127, 255,0.18),
-      transparent 70%
+      280px circle at ${mouseX}px ${mouseY}px,
+      rgba(59, 130, 246, 0.12),
+      transparent 75%
     )
   `;
 
+	const handleCopy = () => {
+		navigator.clipboard.writeText(codeContent);
+		setCopied(true);
+		setTimeout(() => setCopied(false), 2000);
+	};
+
 	return (
-		<div className="flex items-center justify-center overflow-visible">
-			{/* Perspective Wrapper */}
+		<div className="w-full max-w-lg flex items-center justify-center">
 			<div
-				className="overflow-visible"
+				className="w-full"
 				style={{
-					perspective: "1400px",
+					perspective: "1200px",
 				}}
 			>
 				<motion.div
@@ -72,12 +89,12 @@ export default function BannerRightSideCard() {
 					}}
 					className="relative will-change-transform"
 				>
-					{/* Outer Glow */}
-					<div className="absolute -inset-0.5 rounded-4xl bg-linear-to-br from-blue-500/40 via-transparent to-blue-900/30 blur-2xl" />
+					{/* Ambient Glow */}
+					<div className="absolute -inset-1 rounded-3xl bg-linear-to-tr from-blue-500/20 via-indigo-500/10 to-transparent blur-xl pointer-events-none" />
 
-					{/* Card */}
-					<div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#050505]/95 shadow-2xl backdrop-blur-xl">
-						{/* Mouse Glow */}
+					{/* Terminal Card Container */}
+					<div className="relative overflow-hidden rounded-2xl border border-slate-200/90 dark:border-slate-800/90 bg-white/95 dark:bg-slate-900/90 shadow-2xl shadow-blue-500/5 dark:shadow-black/50 backdrop-blur-xl transition-colors duration-300">
+						{/* Interactive Mouse Glow */}
 						<motion.div
 							style={{
 								background: glowBackground,
@@ -85,112 +102,124 @@ export default function BannerRightSideCard() {
 							className="pointer-events-none absolute inset-0 z-0"
 						/>
 
-						<div className="flex flex-col h-full z-10">
-							{/* Top Bar */}
-							<div
-								style={{
-									transform: "translateZ(50px)",
-								}}
-								className="relative z-20 flex items-center justify-between border-b border-white/10 px-6 py-4"
-							>
-								<div className="flex items-center gap-2">
-									<div className="h-3 w-3 rounded-full bg-blue-600" />
-									<div className="h-3 w-3 rounded-full bg-blue-500/70" />
-									<div className="h-3 w-3 rounded-full bg-blue-500/50" />
-								</div>
+						{/* Terminal Window Header */}
+						<div className="relative z-10 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-5 py-3.5 bg-slate-50/80 dark:bg-slate-950/40">
+							<div className="flex items-center gap-2">
+								<span className="h-3 w-3 rounded-full bg-red-400 dark:bg-red-500/80" />
+								<span className="h-3 w-3 rounded-full bg-amber-400 dark:bg-amber-500/80" />
+								<span className="h-3 w-3 rounded-full bg-emerald-400 dark:bg-emerald-500/80" />
+								<span className="ml-2 font-mono text-xs text-slate-500 dark:text-slate-400 font-medium">
+									DeveloperProfile.ts
+								</span>
+							</div>
 
-								<p className="text-sm tracking-wide text-zinc-500">
-									Portfolio.tsx
+							<button
+								type="button"
+								onClick={handleCopy}
+								className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors px-2 py-1 rounded-md hover:bg-slate-200/60 dark:hover:bg-slate-800/60 cursor-pointer"
+								aria-label="Copy snippet"
+							>
+								{copied ? (
+									<>
+										<FiCheck className="w-3.5 h-3.5 text-emerald-500" />
+										<span className="text-emerald-500 font-medium">Copied!</span>
+									</>
+								) : (
+									<>
+										<FiCopy className="w-3.5 h-3.5" />
+										<span>Copy</span>
+									</>
+								)}
+							</button>
+						</div>
+
+						{/* Code Body */}
+						<div className="relative z-10 p-6 font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto select-none">
+							<div className="flex gap-4">
+								<span className="text-slate-400 dark:text-slate-600 select-none">01</span>
+								<p>
+									<span className="text-purple-600 dark:text-purple-400 font-semibold">const </span>
+									<span className="text-blue-600 dark:text-blue-300">developer </span>
+									<span className="text-slate-800 dark:text-slate-200">= &#123;</span>
 								</p>
 							</div>
 
-							{/* Main Content */}
-							<div className="px-5 md:px-10 py-10 h-full flex justify-center items-center">
-								<code className="font-mono text-xs md:text-sm lg:text-base leading-relaxed">
-									<div className="flex gap-4">
-										<span className="text-slate-600 italic">01</span>
-										<p className="flex gap-3">
-											<span className="text-blue-500">const</span>
-											<span className="text-white">
-												developer = {"{"}
-											</span>
-										</p>
-									</div>
-
-									<div className="flex gap-4">
-										<span className="text-slate-600 italic">02</span>
-										<p className="flex gap-3 ml-3">
-											<span className="text-white">name:</span>
-											<span className="text-blue-500">
-												&quot;Tawhidul Islam&quot;
-											</span>
-											<span className="text-white">,</span>
-										</p>
-									</div>
-
-									<div className="flex gap-4">
-										<span className="text-slate-600 italic">03</span>
-										<p className="flex gap-2 ml-3">
-											<span className="text-white">focus:</span>
-											<span className="text-blue-500">
-												&quot;Fullstack Mastery&quot;
-											</span>
-											<span className="text-white">,</span>
-										</p>
-									</div>
-
-									<div className="flex gap-4">
-										<span className="text-slate-600 italic">04</span>
-										<p className="flex gap-1 ml-3">
-											<span className="text-white">skills:</span>
-											<span className="text-blue-500">
-												[&quot;NextJS&quot;, &quot;NodeJS&quot;,
-												&quot;AI&quot;]{" "}
-											</span>
-											<span className="text-white">,</span>
-										</p>
-									</div>
-
-									<div className="flex gap-4">
-										<span className="text-slate-600 italic">05</span>
-										<p className="flex gap-1 ml-3">
-											<span className="text-white">passionate:</span>
-											<span className="text-blue-500">true</span>
-											<span className="text-white">,</span>
-										</p>
-									</div>
-
-									<div className="flex gap-4">
-										<span className="text-slate-600 italic">06</span>
-										<p className="flex gap-1 ml-3">
-											<span className="text-white">motto:</span>
-											<span className="text-blue-500">
-												&quot;Build with Purpose&quot;
-											</span>
-											<span className="text-white">,</span>
-										</p>
-									</div>
-
-									<div className="flex gap-4">
-										<span className="text-slate-600 italic">07</span>
-										<p className="flex gap-3">
-											<span className="text-white">{"}"};</span>
-										</p>
-									</div>
-
-									<div className="flex gap-4 mt-4">
-										<span className="text-slate-600 italic">08</span>
-										<p className="flex">
-											<span className="text-blue-500">
-												depeloper
-											</span>
-											<span className="text-white">
-												.showcase();
-											</span>
-										</p>
-									</div>
-								</code>
+							<div className="flex gap-4">
+								<span className="text-slate-400 dark:text-slate-600 select-none">02</span>
+								<p className="pl-4">
+									<span className="text-slate-700 dark:text-slate-300">name: </span>
+									<span className="text-emerald-600 dark:text-emerald-400">&quot;Tawhidul Islam&quot;</span>
+									<span className="text-slate-800 dark:text-slate-200">,</span>
+								</p>
 							</div>
+
+							<div className="flex gap-4">
+								<span className="text-slate-400 dark:text-slate-600 select-none">03</span>
+								<p className="pl-4">
+									<span className="text-slate-700 dark:text-slate-300">role: </span>
+									<span className="text-emerald-600 dark:text-emerald-400">&quot;Full Stack Engineer&quot;</span>
+									<span className="text-slate-800 dark:text-slate-200">,</span>
+								</p>
+							</div>
+
+							<div className="flex gap-4">
+								<span className="text-slate-400 dark:text-slate-600 select-none">04</span>
+								<p className="pl-4">
+									<span className="text-slate-700 dark:text-slate-300">stack: </span>
+									<span className="text-slate-800 dark:text-slate-200">[</span>
+									<span className="text-emerald-600 dark:text-emerald-400">&quot;Next.js&quot;</span>
+									<span className="text-slate-800 dark:text-slate-200">, </span>
+									<span className="text-emerald-600 dark:text-emerald-400">&quot;React&quot;</span>
+									<span className="text-slate-800 dark:text-slate-200">, </span>
+									<span className="text-emerald-600 dark:text-emerald-400">&quot;Node.js&quot;</span>
+									<span className="text-slate-800 dark:text-slate-200">, </span>
+									<span className="text-emerald-600 dark:text-emerald-400">&quot;MongoDB&quot;</span>
+									<span className="text-slate-800 dark:text-slate-200">],</span>
+								</p>
+							</div>
+
+							<div className="flex gap-4">
+								<span className="text-slate-400 dark:text-slate-600 select-none">05</span>
+								<p className="pl-4">
+									<span className="text-slate-700 dark:text-slate-300">openForWork: </span>
+									<span className="text-amber-600 dark:text-amber-400 font-semibold">true</span>
+									<span className="text-slate-800 dark:text-slate-200">,</span>
+								</p>
+							</div>
+
+							<div className="flex gap-4">
+								<span className="text-slate-400 dark:text-slate-600 select-none">06</span>
+								<p className="pl-4">
+									<span className="text-slate-700 dark:text-slate-300">passion: </span>
+									<span className="text-emerald-600 dark:text-emerald-400">&quot;Build Scalable &amp; Clean UI&quot;</span>
+								</p>
+							</div>
+
+							<div className="flex gap-4">
+								<span className="text-slate-400 dark:text-slate-600 select-none">07</span>
+								<p>
+									<span className="text-slate-800 dark:text-slate-200">&#125;;</span>
+								</p>
+							</div>
+
+							<div className="flex gap-4 mt-2 pt-2 border-t border-slate-100 dark:border-slate-800/60">
+								<span className="text-slate-400 dark:text-slate-600 select-none">08</span>
+								<p>
+									<span className="text-blue-600 dark:text-blue-400 font-medium">developer</span>
+									<span className="text-slate-800 dark:text-slate-200">.</span>
+									<span className="text-indigo-600 dark:text-indigo-400 font-medium">showcase</span>
+									<span className="text-slate-800 dark:text-slate-200">();</span>
+								</p>
+							</div>
+						</div>
+
+						{/* Status Bar */}
+						<div className="relative z-10 flex items-center justify-between border-t border-slate-200 dark:border-slate-800 px-5 py-2.5 bg-slate-50/50 dark:bg-slate-950/20 text-[11px] text-slate-500 dark:text-slate-400">
+							<div className="flex items-center gap-2">
+								<span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+								<span>Available for Full-time &amp; Projects</span>
+							</div>
+							<span className="font-mono">UTF-8</span>
 						</div>
 					</div>
 				</motion.div>

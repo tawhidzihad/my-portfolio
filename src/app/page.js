@@ -5,11 +5,11 @@ import Skills from "@/components/sections/Skills";
 
 export default function Home() {
 	return (
-		<>
-			<Banner></Banner>
-			<Projects></Projects>
-			<Skills></Skills>
-			<About></About>
-		</>
+		<div className="flex flex-col min-h-screen">
+			<Banner />
+			<Projects />
+			<Skills />
+			<About />
+		</div>
 	);
 }
