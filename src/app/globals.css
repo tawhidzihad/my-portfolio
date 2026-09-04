@@ -1,2 +1,83 @@
 @import "tailwindcss";
-@import "@heroui/styles";
+@import "aos/dist/aos.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --border-subtle: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-muted: #64748b;
+  }
+
+  .dark {
+    --bg-primary: #060b17;
+    --bg-secondary: #0d1527;
+    --border-subtle: #1e293b;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.6);
+}
+
+/* Background Pattern & Glow */
+.portfolio-grid {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .portfolio-grid {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

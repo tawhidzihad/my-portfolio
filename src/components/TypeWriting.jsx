@@ -4,26 +4,24 @@ import { TypeAnimation } from "react-type-animation";
 
 const TypeWriting = () => {
 	return (
-		<>
-			<TypeAnimation
-				sequence={[
-					"Developer.",
-					1000,
-					"Designer.",
-					1000,
-					"Innovertor.",
-					1000,
-					"Engineer.",
-					1000,
-				]}
-				wrapper="span"
-				speed={30}
-				cursor={false}
-				style={{ display: "inline-block" }}
-				repeat={Infinity}
-				className="text-blue-500 leading-relaxed font-bold text-[16px] md:text-xl"
-			/>
-		</>
+		<TypeAnimation
+			sequence={[
+				"Full Stack Developer",
+				1500,
+				"Next.js Specialist",
+				1500,
+				"React & Node.js Engineer",
+				1500,
+				"Problem Solver & Innovator",
+				1500,
+			]}
+			wrapper="span"
+			speed={45}
+			cursor={true}
+			style={{ display: "inline-block" }}
+			repeat={Infinity}
+			className="text-blue-600 dark:text-blue-400 font-bold"
+		/>
 	);
 };
 
