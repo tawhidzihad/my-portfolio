@@ -73,7 +73,7 @@ const Skills = () => {
 						className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white"
 					>
 						Skills &amp;{" "}
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-cyan-400">
+						<span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-cyan-400">
 							Expertise
 						</span>
 					</h2>

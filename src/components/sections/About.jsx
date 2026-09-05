@@ -58,7 +58,8 @@ const About = () => {
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 					{/* Left Column: Text & Profile Info */}
 					<div
-						data-aos="fade-right"
+						data-aos="fade-up"
+						data-aos-delay="100"
 						className="lg:col-span-7 space-y-7 text-center lg:text-left"
 					>
 						{/* Badge */}
@@ -71,7 +72,7 @@ const About = () => {
 						{/* Heading */}
 						<h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
 							Dedicated to Crafting Exceptional{" "}
-							<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-cyan-400">
+							<span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-cyan-400">
 								Web Solutions.
 							</span>
 						</h2>
@@ -142,16 +143,17 @@ const About = () => {
 
 					{/* Right Column: Image with Framing & Badges */}
 					<div
-						data-aos="fade-left"
+						data-aos="fade-up"
+						data-aos-delay="200"
 						className="lg:col-span-5 flex justify-center items-center"
 					>
 						<div className="relative w-full max-w-sm">
 							{/* Ambient Background Aura */}
-							<div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-blue-500/20 via-indigo-500/15 to-purple-500/10 blur-2xl pointer-events-none" />
+							<div className="absolute -inset-2 rounded-3xl bg-linear-to-tr from-blue-500/20 via-indigo-500/15 to-purple-500/10 blur-2xl pointer-events-none" />
 
 							{/* Image Container Card */}
 							<div className="relative rounded-3xl border border-slate-200/90 dark:border-slate-800/90 bg-white dark:bg-slate-900 p-3 shadow-xl overflow-hidden group">
-								<div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950">
+								<div className="relative aspect-4/5 w-full rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950">
 									<Image
 										src="/images/tawhid.png"
 										alt="Tawhidul Islam - Full Stack Web Developer"

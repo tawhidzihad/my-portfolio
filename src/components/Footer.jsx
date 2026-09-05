@@ -61,7 +61,7 @@ const Footer = () => {
 								alt="Tawhid Dev Logo"
 								width={42}
 								height={42}
-								className="rounded-xl shadow-sm"
+								className="bg-transparent"
 							/>
 							<span className="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white">
 								Tawhid<span className="text-blue-600 dark:text-blue-400"> Zihad</span>

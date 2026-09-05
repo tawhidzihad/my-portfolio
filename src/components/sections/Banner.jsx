@@ -28,8 +28,6 @@ const SOCIAL_LINKS = [
 	},
 ];
 
-const RESUME_LINK = "https://drive.google.com/file/d/1kmbuew2oYSq2H2zX8i8TItocUjf8OCuY/view";
-
 const Banner = () => {
 	return (
 		<section id="hero" className="relative overflow-hidden pt-32 md:pt-40 lg:pt-48 pb-20 md:pb-28 transition-colors duration-300">
@@ -133,8 +131,7 @@ const Banner = () => {
 
 					{/* Right 3D Interactive Showcase */}
 					<div
-						data-aos="fade-left"
-						data-aos-delay="200"
+                  data-aos="zoom-in"
 						className="w-full lg:w-5/12 flex justify-center"
 					>
 						<BannerRightSideCard />

@@ -56,7 +56,7 @@ export default function Navbar() {
 				}`}
 			aria-label="Main Navigation"
 		>
-			<div className="relative backdrop-blur-xl bg-white/10 dark:bg-slate-900/10 border border-slate-200/10 dark:border-slate-800/10 rounded-full px-4 py-2.5 shadow-lg shadow-black/5 dark:shadow-black/20 flex items-center justify-between">
+			<div className="relative backdrop-blur-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200/90 dark:border-slate-800/90 rounded-full px-4 py-2.5 shadow-lg shadow-black/5 dark:shadow-black/20 flex items-center justify-between">
 				{/* Brand Logo / Home Link */}
 				<Link
 					href="/"
@@ -68,6 +68,7 @@ export default function Navbar() {
 						alt="Tawhid Dev Logo"
 						width={42}
 						height={42}
+                  loading="eager"
 						className="bg-transparent"
 					/>
 				</Link>
